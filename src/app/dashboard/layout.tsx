@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export default function DashboardLayout({
     children
 } :{
@@ -12,11 +14,12 @@ export default function DashboardLayout({
         {/* Navigation Links */}
         <section>
             <nav>
-                <a href="/profile">Profile</a> |
-                <a href="/settings">Settings</a> |
-                <a href="/checkout">Checkout</a> |
-                <a href="/order">Order</a> |
-                <a href="/products">products</a>
+                <Link href="/dashboard/profile">Profile</Link> |
+                <Link href="/dashboard/settings">Settings</Link> |
+                <Link href="/dashboard/checkout">Checkout</Link> |
+                <Link href="/dashboard/order">Order</Link> |
+                <Link href="/dashboard/products">products</Link> |
+                <Link href="/">Go back to Home</Link>
             </nav>
         </section>
         <section>
