@@ -9,7 +9,8 @@ export default function Home() {
   return (
     <main>
       <Link href="/">Home</Link> | 
-      <Link href="/dashboard">Dashboard</Link>
+      <Link href="/dashboard">Dashboard</Link> |
+      <Link href ="/courses">Courses</Link>
     </main>
   )
 }
