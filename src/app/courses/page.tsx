@@ -1,28 +1,12 @@
-'use client'
+import { courses } from "@/data/courses";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
-const courses = [
-  {
-    id: 1,
-    title: 'Learn node',
-    desc: 'API DEVELOPMENT WITH NODE.JS ...........',
-    slug: 'nodejs',
-  },
-  {
-    id: 2,
-    title: 'Learn javascript',
-    desc: 'STEP BY STEP GUIDE TO LEARN JAVASCRIPT ...........',
-    slug: 'js',
-  },
-];
+
 export default function Courses(){
-  const router = useRouter();
     return (
         <div>
           <h1>COURSES</h1>
-          <button onClick={() => router.push('/')} >Go back to Home</button>
-
+           <Link href="/">Go Back to Home</Link>
           {courses.map(course => (
             <div key={course.id}>
               <h2>{course.title}</h2>
@@ -32,4 +16,16 @@ export default function Courses(){
           ))}
         </div>
     )
+}
+
+/**
+ * You have to create array of courses slug. It will tell the next.js that you
+ * you can have these number of pages
+ * Next.js will generate all the pages a head of time.
+ * @returns returns the array of paths/slugs
+ */
+export async function generateStaticParams() {
+  // need to fetch data from external
+  // It should be server component
+  return courses.map((course) => course.slug);
 }
