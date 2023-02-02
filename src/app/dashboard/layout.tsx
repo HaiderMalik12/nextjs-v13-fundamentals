@@ -1,5 +1,4 @@
 import Link from "next/link";
-import {useRouter} from 'next/navigation';
 
 export default function DashboardLayout({
     children
@@ -7,7 +6,6 @@ export default function DashboardLayout({
     children: React.ReactNode
 }
 ){
-    const router = useRouter();
     return <div>
         {/* Add Sidebard */}
         <section>
@@ -21,8 +19,8 @@ export default function DashboardLayout({
                 <Link href="/dashboard/checkout">Checkout</Link> |
                 <Link href="/dashboard/order">Order</Link> |
                 <Link href="/dashboard/products">products</Link> |
-                {/* <Link href="/">Go back to Home</Link> */}
-                <button onClick={() => router.push('/')}>Go back to Home</button>
+                <Link href="/">Go back to Home</Link>
+             
             </nav>
         </section>
         <section>
