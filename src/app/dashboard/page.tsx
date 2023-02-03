@@ -3,6 +3,7 @@ import { Todos } from "@/ui/todos";
 import { Suspense } from "react";
 
 export default function Dashboard(){
+    throw new Error('ERROR IN DASHBORD')
     return (
         <div>
             <h1>Dashboard</h1>
