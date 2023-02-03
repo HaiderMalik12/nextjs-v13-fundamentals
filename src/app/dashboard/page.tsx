@@ -1,11 +1,12 @@
 import { Comments } from "@/ui/Comments";
 import { Todos } from "@/ui/todos";
 import { Suspense } from "react";
+import styles from './dashboard.module.css';
 
 export default function Dashboard(){
-    throw new Error('ERROR IN DASHBORD')
+    // throw new Error('ERROR IN DASHBORD')
     return (
-        <div>
+        <div className={styles.dashboard}>
             <h1>Dashboard</h1>
             {/* Render the Todos */}
             <Suspense fallback={<p>...Loading</p>}>
